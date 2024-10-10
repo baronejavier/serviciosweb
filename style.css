@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples líneas si es necesario */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Asegura que el cuerpo ocupe toda la altura */
+    font-family: Arial, sans-serif; /* Fuente general */
+    line-height: 1.6;
+    background-color: #f3f3f3;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    background: url(img/imagen\ portada.webp) no-repeat center center/cover; /* Cambia 'ruta/a/tu/imagen-de-fondo.jpg' por la ruta de tu imagen */
+    color: white;
+    min-height: 75vh; /* Ocupa toda la pantalla */
+    position: relative; /* Necesario para que el contenido dentro del header use position absolute */
+}
+
+h1 {
+    position: absolute;
+    bottom: 20px; /* Ajusta la distancia del texto desde la parte inferior */
+    left: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
+    margin: 0;
+    font-size: 4vw; /* Tamaño de fuente flexible */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para mejor legibilidad */
+    text-align: center;
+    line-height: 1.2;
+}
+
+section {
+    padding: 40px; /* Asegura espacio suficiente en las secciones siguientes */
+}
+
+h2, h3 {
+    margin: 0px 0;
+}
+
+.servicios-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+    justify-content: space-between; /* Espaciado entre columnas */
+}
+
+.servicio {
+    flex: 1 1 calc(33.33% - 20px); /* Hace que cada columna ocupe un tercio del contenedor, con un margen */
+    margin: 10px; /* Margen alrededor de cada columna */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+.servicio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#packs {
+    background-color: #f5f5f5;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#packs h2 {
+    font-size: 2.5em;
+    color: #4a148c;
+    margin-bottom: 30px;
+}
+
+#packs p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.packs-contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 900px) {
+    .packs-contenedor {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    }
+}
+
+@media (max-width: 600px) {
+    .packs-contenedor {
+        grid-template-columns: 1fr; /* Una columna */
+    }
+}
+
+.pack {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pack h3 {
+    font-size: 1.8em;
+    color: #4a148c;
+    margin-bottom: 15px;
+}
+
+.pack .precio {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.pack ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.pack ul li {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.pack a.btn-contratar {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #4a148c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.pack a.btn-contratar:hover {
+    background-color: #370b6a;
+}
+
+.pack.destacado {
+    border: 2px solid #4a148c;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.pack:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#contacto {
+    background-size: contain; /* Ajusta la imagen para que se vea completa en altura */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center center; /* Centra la imagen */
+    padding: 60px 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url(img/portada\ 2.webp) no-repeat center center/cover; /* Cambia 'ruta/a/tu/imagen-de-fondo.jpg' por la ruta de tu imagen */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form h2{
+    text-align: center;
+}
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background: #4B0082;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #800080;
+}
+
+footer {
+    background: #4B0082;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilo personalizado para el botón de Mercado Pago */
+.mercadopago-button {
+    padding: 5px 30px !important;
+    background-color: #4a148c !important;
+    color: white !important;
+    text-decoration: none !important;
+    border-radius: 5px !important;
+    font-size: 1.2em !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.mercadopago-button:hover {
+background-color: #370b6a !important;
+}
+
+/* Etiqueta de Más Vendido */
+.etiqueta-vendido {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ff5722;
+    color: white;
+    padding: 5px 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-radius: 5px;
+    transform: rotate(10deg);
+    z-index: 1;
+}
+
+/* Estilos del botón flotante de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    width: 15%; /* Ancho cuadrado */
+    height: 15%; /* Altura cuadrada */
+    background-image: url(img/whatsappboton.png); /* Ruta de tu imagen */
+    background-size: cover; /* Para que la imagen se ajuste al botón */
+    text-indent: -9999px; /* Oculta el texto del botón */
+    cursor: pointer;
+    background-position: center; /* Posición centrada de la imagen */
+}
