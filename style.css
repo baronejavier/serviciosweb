@@ -173,57 +173,6 @@ h2, h3 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-#contacto {
-    background-size: contain; /* Ajusta la imagen para que se vea completa en altura */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: center center; /* Centra la imagen */
-    padding: 60px 20px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: url(img/portada\ 2.webp) no-repeat center center/cover; /* Cambia 'ruta/a/tu/imagen-de-fondo.jpg' por la ruta de tu imagen */
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-form label {
-    margin: 10px 0 5px;
-}
-
-form h2{
-    text-align: center;
-}
-form input, form textarea {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-button {
-    padding: 10px;
-    background: #4B0082;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-button:hover {
-    background: #800080;
-}
-
 footer {
     background: #4B0082;
     color: white;
