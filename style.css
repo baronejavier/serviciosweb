@@ -21,10 +21,10 @@ body, html {
 }
 
 header {
-    background: url(img/imagen\ portada.webp) no-repeat center center/cover; /* Cambia 'ruta/a/tu/imagen-de-fondo.jpg' por la ruta de tu imagen */
+    background: url(img/portada.jpg) no-repeat center center/cover; /* Cambia 'ruta/a/tu/imagen-de-fondo.jpg' por la ruta de tu imagen */
     color: white;
-    min-height: 75vh; /* Ocupa toda la pantalla */
     position: relative; /* Necesario para que el contenido dentro del header use position absolute */
+    padding: 5%;
 }
 
 .texto-contorno {
@@ -40,7 +40,7 @@ header {
 }
 
 h1 {
-    position: absolute;
+    position: center;
     margin: 0;
     bottom: 0%;
     font-size: 4vw; /* Tamaño de fuente flexible */
